@@ -1,0 +1,10 @@
+init:
+  ps: |
+        Get-Date
+        $ErrorActionPreference = "Stop"
+
+install:
+  - ps: New-Item .\new_empty_file.txt -type file
+
+deploy_script:
+  - appveyor PushArtifact .\new_empty_file.txt
