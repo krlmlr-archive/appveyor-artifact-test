@@ -6,5 +6,7 @@ init:
 install:
   - ps: New-Item .\new_empty_file.txt -type file
 
+build_script:
+
 deploy_script:
   - appveyor PushArtifact .\new_empty_file.txt
