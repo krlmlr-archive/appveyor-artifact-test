@@ -16,5 +16,5 @@ test_script:
 
 deploy_script:
   - ps: Get-Date
-  - appveyor PushArtifact .\new_empty_file.txt
+  - ps: Push-AppveyorArtifact .\new_empty_file.txt
   - ps: Get-Date
