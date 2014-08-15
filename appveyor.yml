@@ -4,7 +4,9 @@ init:
         $ErrorActionPreference = "Stop"
 
 install:
-  - ps: New-Item .\new_empty_file.txt -type file
+  - ps: |
+        New-Item .\new_empty_file.txt -type file
+        Write-Output "Non-empty test" | Out-File .\new_empty_file.txt
 
 build_script:
   - ps: Write-Host "build_script" -ForegroundColor Magenta
