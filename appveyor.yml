@@ -13,4 +13,6 @@ test_script:
   - ps: Write-Host "test_script" -ForegroundColor Magenta
 
 deploy_script:
+  - ps: Get-Date
   - appveyor PushArtifact .\new_empty_file.txt
+  - ps: Get-Date
