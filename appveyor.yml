@@ -1,6 +1,7 @@
 init:
   ps: |
-        Get-Date
+        Write-Output "Test output"
+        Write-Host "Test output (host)"
         $ErrorActionPreference = "Stop"
 
 install:
